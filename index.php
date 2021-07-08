@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['login'] = "";
+?>
 <html>
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -25,30 +29,37 @@
                         </li>
                         
                     </ul>
-
-                    <form class="d-flex">
-                    <a href="" target="_blank"> </a>
-                        <button class="btn btn-outline-success" id="b_log">log in</button>
-                    </form>
+                    <?php
+                        if(empty($_SESSION['login'])){?>
+                        <form class="d-flex">
+                        <a href="" target="_blank"> </a>
+                            <button class="btn btn-outline-success" id="b_log">log in</button>
+                        </form>
+                    <?php }
+                    
+                    else {
+                        echo "Hello ".$_SESSION['login'];
+                    }
+                    ?>
                 </div>
             </div>
         </nav>
         <div>
-            <form class= "position-absolute top-50 start-50 translate-middle " >
+            <form class= "position-absolute top-50 start-50 translate-middle bg-dark p-5 border" action="avtosklad.php" method="POST">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button type="sumbit" class="btn btn-primary">Submit</button>
+                <button type="sumbit" class="btn btn-primary" name="button">Submit</button>
             </form>
         </div>
         
