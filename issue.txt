@@ -1,2 +1,4 @@
-Add border radius into form 
-Try to create modal window with form  (Log in)
+Add border radius into form +
+Try to create modal window with form  (Log in)+
+buttons "log in" and "registration" centered and its modal windows
+designed form("registration") create one suze for this form
