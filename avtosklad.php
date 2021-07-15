@@ -1,5 +1,5 @@
 <?php
-session_start();
+require("security.php");
 if(isset($_POST['button'])){
     echo "Hello ".$_POST['email'];
     $_SESSION['login']=$_POST['email'];
