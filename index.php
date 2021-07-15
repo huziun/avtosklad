@@ -22,6 +22,11 @@ $_SESSION['login'] = "";
         .input_c{
             color: white;
         }
+        .show {
+            display: flex !important;
+            justify-content:center;
+            align-items: center;
+        }
         </style>
     </head>
     
@@ -43,19 +48,19 @@ $_SESSION['login'] = "";
                     </ul>
 
                     <div>
-                        <form class="d-flex">
+                        
                             <a href="" target="_blank"> </a>
                             <button class="btn btn-outline-success " type="button" data-toggle="modal" data-target="#registration">registration</button>
-                        </form>
+                        
                     </div>
                     
                     <div>
                         <?php
                             if(empty($_SESSION['login'])){?>
-                            <form class="d-flex">
+                
                             <a href="" target="_blank"> </a>
                             <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#exampleModalCenter">log in</button>
-                            </form>
+                    
                         <?php }
                     
                         else {
@@ -68,7 +73,7 @@ $_SESSION['login'] = "";
             </div>
         </nav>
         
-        <div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="registration" aria-hidden="true">
+        <div class="modal fade" id="registration" tabindex="-1" role="dialog"  aria-labelledby="registration" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content"  id="modal">
                     <form class="row needs-validation position-absolute bg-dark border" novalidate>
