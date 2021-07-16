@@ -30,6 +30,7 @@ $_SESSION['login'] = "";
         .mr-2 {
             margin-right:20px;
         }
+        
         </style>
     </head>
     
