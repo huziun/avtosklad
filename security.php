@@ -8,8 +8,8 @@ class Page_access{
         $this->user=$_SESSION['login'];
     }
     public function checkuser(){
-        if(empty($user)){
-            return header("Location: index.php");
+        if(empty($this->user)){
+            header("Location: index.php");
         }
     }
 }

@@ -21,7 +21,7 @@ class navbar{
             
         <?php
     }
-    public function buttons(){
+    public function log_in_buttons(){
         ?>
             
                     <?php
@@ -34,7 +34,6 @@ class navbar{
                     </div>
                     
                     <div>
-
                             <a href="" target="_blank"> </a>
                             <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#exampleModalCenter">Log in</button>
                     
@@ -51,11 +50,28 @@ class navbar{
         </nav>
         <?php
     }
+    public function log_out_buttons(){
+           # if(notempty($_SESSION['login'])){
+        ?>
+        <div class="mr-2" >
+                        
+                        <a href="" target="_blank"> </a>
+                        <button class="btn btn-outline-success " type="button" data-toggle="modal" data-target="#registration">log out</button>
+                    
+                </div>
+                </div>
+            </div>
+        </nav>
+        <?php
+        #}
+    }
 }
 
 
 $nav_o = new navbar;
-$nav_o->buttons();
+#$nav_o->log_in_buttons();
+$nav_o->log_out_buttons();
+
 
 
 ?>

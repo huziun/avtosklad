@@ -1,3 +1,2 @@
-
-buttons "log in" and "registration" centered and its modal windows
-designed form("registration") create one suze for this form
+ban log in "avtoshop"
+sklad -> avtoshop fix transition
