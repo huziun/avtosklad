@@ -9,6 +9,7 @@ class Page_access{
     }
     public function checkuser(){
         if(empty($this->user)){
+           
             header("Location: index.php");
         }
     }

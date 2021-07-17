@@ -17,13 +17,18 @@ class navbar{
                         </li>
                         
                     </ul>
-               
-            
+                <?php 
+                 
+                (empty($_SESSION['login'])) ? $this->log_in_buttons() : $this->log_out_buttons();
+                ?>
+                </div>
+            </div>
+        </nav>
         <?php
     }
     public function log_in_buttons(){
         
-                            if(empty($_SESSION['login'])){?>
+                          ?>
                     <div class="mr-2" >
                         
                             <a href="" target="_blank"> </a>
@@ -37,20 +42,13 @@ class navbar{
                     
                     </div>   
                             
-                </div>
-            </div>
-        </nav>
-                        <?php 
-                        
-                    }
-                    
-                       
-                        ?>
+              
+                     
                     
         <?php
     }
     public function log_out_buttons(){
-            if(!empty($_SESSION['login'])){
+          
                 echo "<font style='color:white;'>Hello ".$_SESSION['login']."</font>";
         ?>
         <div class="mr-2" >
@@ -59,18 +57,15 @@ class navbar{
                         <button class="btn btn-outline-success " type="button" data-toggle="modal" data-target="#registration">Log out</button>
                     
                 </div>
-                </div>
-            </div>
-        </nav>
+               
         <?php
         }
-    }
+    
 }
 
 
 $nav_o = new navbar;
-$nav_o->log_in_buttons();
-$nav_o->log_out_buttons();
+
 
 
 ?>

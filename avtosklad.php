@@ -16,13 +16,13 @@ if(isset($_POST['button'])){
 <?php require("navbar.php"); ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid collapse navbar-collapse"> 
+  <div class="container-fluid collapse navbar-collapse" style="justify-content: flex-end;"> 
     <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
 </div>
-<nav>
+</nav>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
