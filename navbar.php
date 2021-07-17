@@ -17,15 +17,18 @@ class navbar{
                         </li>
                         
                     </ul>
-               
-            
+                <?php 
+                 
+                (empty($_SESSION['login'])) ? $this->log_in_buttons() : $this->log_out_buttons();
+                ?>
+                </div>
+            </div>
+        </nav>
         <?php
     }
-    public function buttons(){
-        ?>
-            
-                    <?php
-                            if(empty($_SESSION['login'])){?>
+    public function log_in_buttons(){
+        
+                          ?>
                     <div class="mr-2" >
                         
                             <a href="" target="_blank"> </a>
@@ -34,28 +37,35 @@ class navbar{
                     </div>
                     
                     <div>
-
                             <a href="" target="_blank"> </a>
                             <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#exampleModalCenter">Log in</button>
                     
-                        <?php }
-                    
-                        else {
-                            echo "<font style='color:white;'>Hello ".$_SESSION['login']."</font>";
-                        }
-                        ?>
                     </div>   
-                   
-                </div>
-            </div>
-        </nav>
+                            
+              
+                     
+                    
         <?php
     }
+    public function log_out_buttons(){
+          
+                echo "<font style='color:white;'>Hello ".$_SESSION['login']."</font>";
+        ?>
+        <div class="mr-2" >
+                        
+                        <a href="" target="_blank"> </a>
+                        <button class="btn btn-outline-success " type="button" data-toggle="modal" data-target="#registration">Log out</button>
+                    
+                </div>
+               
+        <?php
+        }
+    
 }
 
 
 $nav_o = new navbar;
-$nav_o->buttons();
+
 
 
 ?>

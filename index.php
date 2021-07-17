@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+#$_SESSION['login'] = "";
 ?>
 <html>
     <head>
@@ -40,7 +40,7 @@ session_start();
         <div class="modal fade" id="registration" tabindex="-1" role="dialog"  aria-labelledby="registration" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content"  id="modal">
-                    <form class="row needs-validation position-absolute bg-dark border p-3" method="POST" novalidate>
+                    <form class="row needs-validation position-absolute bg-dark border p-3" action="avtosklad.php" method="POST" novalidate>
                         <div class="md-3">
                             <label for="validationCustom01" class="form-label input_c">First name</label>
                             <input type="text" class="form-control" id="validationCustom01" value="" required>

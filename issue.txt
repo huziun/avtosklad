@@ -1,3 +1,3 @@
-
-buttons "log in" and "registration" centered and its modal windows
-designed form("registration") create one suze for this form
+create function log out button
+fix buttons on avtosklad on mobile phone
+    
