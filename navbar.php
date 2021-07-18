@@ -53,8 +53,8 @@ class navbar{
         ?>
         <div class="mr-2" >
                         
-                        <a href="" target="_blank"> </a>
-                        <button class="btn btn-outline-success " type="button" data-toggle="modal" data-target="#registration">Log out</button>
+                        
+                        <a class="btn btn-outline-success" href="log_out.php">Log out</a>
                     
                 </div>
                
