@@ -43,7 +43,7 @@ session_start();
                     <form class="row needs-validation position-absolute bg-dark border p-3" action="avtosklad.php" method="POST" novalidate>
                         <div class="md-3">
                             <label for="validationCustom01" class="form-label input_c">First name</label>
-                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                            <input type="text" class="form-control" id="validationCustom01" name="firstname" value="" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -51,7 +51,7 @@ session_start();
 
                         <div class="md-3">
                             <label for="validationCustom02" class="form-label input_c">Last name</label>
-                            <input type="text" class="form-control " id="validationCustom02" value="" required>
+                            <input type="text" class="form-control " id="validationCustom02" name="lastname" value="" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -59,7 +59,7 @@ session_start();
 
                         <div class="md-3">
                             <label for="InputEmail1" class="form-label input_c">Email address</label>
-                            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" name="email">
+                            <input type="email" class="form-control" id="InputEmail1" name="email" aria-describedby="emailHelp" name="email">
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
 
@@ -70,12 +70,12 @@ session_start();
 
                         <div class="md-3">
                             <label for="SecondInputPassword1" class="form-label input_c">Please repit your password</label>
-                            <input type="password" class="form-control" id="SecondInputPassword1" name="password">
+                            <input type="password" class="form-control" id="SecondInputPassword1" name="password2">
                         </div>
                     
                         <div class="md-3">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" name="check" required>
                                 <label class="form-check-label input_c" for="invalidCheck">
                                     Agree to terms and conditions
                                 </label>
@@ -86,7 +86,7 @@ session_start();
                         </div>
 
                         <div class="col-12">
-                            <button class="btn btn-primary" type="submit">Submit form</button>
+                            <button class="btn btn-primary" type="submit" name="regbutt">Submit form</button>
                         </div>
 
                     </form>

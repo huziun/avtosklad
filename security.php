@@ -15,6 +15,12 @@ class Page_access{
     }
 }
 
-$odj = new Page_access;
-$odj->checkuser();
+class Validation{
+    public function checkPaswword(string $pas1, string $pas2){
+        if($pas1 == $pas2){
+            return True;
+        }
+        return 'invalid password';
+    }
+}
 ?>

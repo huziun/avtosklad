@@ -1,11 +1,15 @@
 <?php
 session_start();
+
 if(isset($_POST['button'])){
    
     $_SESSION['login']=$_POST['email'];
 }
-require("security.php");
 
+require("register.php");
+require_once("security.php");
+$odj = new Page_access;
+$odj->checkuser();
 ?>
 <html>
 <head>
