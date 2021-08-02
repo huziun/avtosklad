@@ -1,3 +1,2 @@
-create function log out button
-fix buttons on avtosklad on mobile phone
+
     
