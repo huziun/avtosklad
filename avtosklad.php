@@ -2,12 +2,16 @@
 session_start();
 
 if(isset($_POST['button'])){
-   
+	
     $_SESSION['login']=$_POST['email'];
+	require 'login.php';
+}
+if(isset($_POST['regbutt'])){
+	
+	require 'register.php';
 }
 
-require("register.php");
-require_once("security.php");
+require_once 'security.php';
 $odj = new Page_access;
 $odj->checkuser();
 ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'passecurity.php';
+
 class Page_access{
     
     private $user;

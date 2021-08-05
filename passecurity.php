@@ -26,23 +26,17 @@ class Password{
         $md5_str = $this->MD($pass, $salt);
         echo 'md5_str:';
         var_dump($md5_str);
-        return $md5_str;
+        return [$md5_str,$salt];
     }
     
     public function chacking($pas_log, $pass, $salt_z){
         $md5_pas = $this->MD($pass, $salt_z);
         if($pas_log === $md5_pas){
-            return 'true';
+            return true;
         }
-        return 'Enter correct password';
+        return false;
     }
 }
 
-$pass = 'helloword';
-$pas_log = '2925b0125bb2f6ddf582633ac619b530';
-$salt_z = 'CV`Fipf';
 
-$password = new Password;
-//$password->NEW_password($pass);
-var_dump($password->chacking($pas_log, $pass, $salt_z));
 ?>
