@@ -1,13 +1,16 @@
 <?php
 session_start();
 
+
 class Page_access{
     
     private $user;
 
     public function __construct(){
         $this->user=$_SESSION['login'];
+        
     }
+    
     public function checkuser(){
         if(empty($this->user)){
            
@@ -17,11 +20,12 @@ class Page_access{
 }
 
 class Validation{
-    public function checkPaswword(string $pas1, string $pas2){
-        if($pas1 == $pas2){
-            return True;
+   
+    public function checkPaswword( $pas1, $pas2){
+        if($pas1 === $pas2){
+            return 'true';
         }
-        return 'invalid password';
+        return 'false';
     }
 }
 ?>

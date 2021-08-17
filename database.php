@@ -6,7 +6,7 @@ class DB{
         try{
             $pdo = new PDO('mysql:dbname=avtosklad;host=127.0.0.1', 'root','');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo 'success';
+            //echo 'success';
             $this->pdo = $pdo;
         }
         catch(PDOException $e){

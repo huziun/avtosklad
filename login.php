@@ -10,7 +10,7 @@ class LogIn{
 
     public function __construct(){
         $this->user=$_POST;
-        var_dump($this->user);
+        //var_dump($this->user);
         $bd = new DB();
         $this->bd = $bd->getPDO();
         $this->check = new Password;
@@ -21,9 +21,9 @@ class LogIn{
         $result = $this->bd->prepare($sql);
         $result->execute(array(':email' => $this->user['email']));
         $ressa = $result->fetch();
-        var_dump($ressa);
+        //var_dump($ressa);
         $check = $this->check->chacking($ressa['password'],$this->user['password'],$ressa['salt']);
-        var_dump($check);
+        //var_dump($check);
     }
 
 }
