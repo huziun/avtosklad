@@ -12,7 +12,7 @@ class Page_access{
     }
     
     public function checkuser(){
-        if(empty($this->user)){
+        if(empty($_SESSION['login'])){
            
             header("Location: index.php");
         }

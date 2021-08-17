@@ -1,8 +1,8 @@
 <?php
 session_start();
-require 'database.php';
+require_once 'database.php';
 require_once 'security.php';
-require 'passecurity.php';
+require_once 'passecurity.php';
 class LogIn{
     private $user;
     private $bd;
@@ -17,13 +17,19 @@ class LogIn{
     }
     
     public function Enter(){
-        $sql = 'SELECT * FROM `users` WHERE `email` = :email';
+        //$sql = "SELECT * FROM users WHERE email = '?'";
+        $sql = "SELECT * FROM users WHERE email = ?";
         $result = $this->bd->prepare($sql);
-        $result->execute(array(':email' => $this->user['email']));
+        $result->execute(array( $this->user['email']));
         $ressa = $result->fetch();
-        //var_dump($ressa);
+        
+        
         $check = $this->check->chacking($ressa['password'],$this->user['password'],$ressa['salt']);
         //var_dump($check);
+        if($check){
+            $_SESSION['login'] = $ressa;
+            header("Location: avtosklad.php");
+        }
     }
 
 }

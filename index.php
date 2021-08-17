@@ -88,6 +88,7 @@ session_start();
                         <div class="col-12">
                             <button class="btn btn-primary" type="submit" name="regbutt">Submit form</button>
                         </div>
+                        
 
                     </form>
                 </div>

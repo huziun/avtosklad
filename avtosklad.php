@@ -3,11 +3,11 @@ session_start();
 
 if(isset($_POST['button'])){
 	
-    $_SESSION['login']=$_POST['email'];
+    //$_SESSION['login']=$_POST['email'];
 	require 'login.php';
 }
 if(isset($_POST['regbutt'])){
-	
+	$_SESSION['regbutt'] = $_POST['email'];
 	require 'register.php';
 }
 
@@ -40,7 +40,7 @@ $odj->checkuser();
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-4">
-					<h2 class="heading-section">Welcome <?php echo $_SESSION['login']; ?></h2>
+					<h2 class="heading-section">Welcome <?php echo $_SESSION['login']['firstname']; ?></h2>
 				</div>
 			</div>
 			<div class="row">

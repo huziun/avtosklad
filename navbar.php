@@ -49,7 +49,7 @@ class navbar{
     }
     public function log_out_buttons(){
           
-                echo "<font style='color:white;'>Hello ".$_SESSION['login']."</font>";
+                echo "<font style='color:white;'>Hello ".$_SESSION['login']['name']."</font>";
         ?>
         <div class="mr-2" >
                         
