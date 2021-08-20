@@ -36,26 +36,36 @@ $odj->checkuser();
       </form>
 </div>
 </nav>
-<section class="ftco-section">
+<section>
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-4">
-					<h2 class="heading-section">Welcome <?php echo $_SESSION['login']['firstname']; ?></h2>
-				</div>
+	
+			<div class="button ">
+				<button class = "universary rounded-3 border-cadetblue">
+					Універсальні
+				</button>
+				<button class="rounded-3">
+					Запчастини
+				</button>
+			
+				<button class="rounded-3 border-color: cadetblue">
+					Редагувати
+				</button>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
-					<h3 class="h5 mb-4 text-center">Inventory</h3>
-					<div class="table-wrap">
-						<table class="table">
+				<div class="col-md-20">
+					<h3 class="h5 mb-1 text-center">Inventory</h3>
+					<div class="">
+						<table class="table ">
 						  <thead class="thead-primary">
 						    <tr>
-						    	<th>&nbsp;</th>
-						    	<th>&nbsp;</th>
-						    	<th>Product</th>
-						      <th>Price</th>
-						      <th>Quantity</th>
-						      <th>total</th>
+							<th>&nbsp;</th>
+						    	<th class ="">№</th>
+						    	<th>Код</th>
+						    	<th>Товар</th>
+								<th>Автомобіль</th>
+						      	<th>Ціна</th>
+						      <th>Кількість</th>
+						      <th>Загально</th>
 						      <th>&nbsp;</th>
 						    </tr>
 						  </thead>
@@ -67,6 +77,16 @@ $odj->checkuser();
 										  <span class="checkmark"></span>
 										</label>
 						    	</td>
+								<td>
+									<div>
+									<span>1</span>
+									</div>
+									
+									
+								</td>
+								<td>
+									<div>1234</div>
+								</td>
 						    	<td>
 						    		<div class="img" style="background-image: url(images/product-1.png);"></div>
 						    	</td>
@@ -90,125 +110,7 @@ $odj->checkuser();
 				        	</td>
 						    </tr>
 
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						    	<td>
-						    		<div class="img" style="background-image: url(images/product-2.png);"></div>
-						    	</td>
-						      <td>
-						      	<div class="email">
-						      		<span>Sneakers Shoes 2020 For Men </span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-						      	</div>
-						      </td>
-						      <td>$30.99</td>
-						      <td class="quantity">
-					        	<div class="input-group">
-				             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-				          	</div>
-				          </td>
-				          <td>$30.99</td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						    	<td>
-						    		<div class="img" style="background-image: url(images/product-3.png);"></div>
-						    	</td>
-						      <td>
-						      	<div class="email">
-						      		<span>Sneakers Shoes 2020 For Men </span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-						      	</div>
-						      </td>
-						      <td>$35.50</td>
-						      <td class="quantity">
-					        	<div class="input-group">
-				             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-				          	</div>
-				          </td>
-				          <td>$35.50</td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-
-						    <tr class="alert" role="alert">
-						    	<td>
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						    	<td>
-						    		<div class="img" style="background-image: url(images/product-4.png);"></div>
-						    	</td>
-						      <td>
-						      	<div class="email">
-						      		<span>Sneakers Shoes 2020 For Men </span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-						      	</div>
-						      </td>
-						      <td>$76.99</td>
-						      <td class="quantity">
-					        	<div class="input-group">
-				             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-				          	</div>
-				          </td>
-				          <td>$76.99</td>
-						      <td>
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
-
-						    <tr class="alert" role="alert">
-						    	<td class="border-bottom-0">
-						    		<label class="checkbox-wrap checkbox-primary">
-										  <input type="checkbox">
-										  <span class="checkmark"></span>
-										</label>
-						    	</td>
-						    	<td class="border-bottom-0">
-						    		<div class="img" style="background-image: url(images/product-1.png);"></div>
-						    	</td>
-						      <td class="border-bottom-0">
-						      	<div class="email">
-						      		<span>Sneakers Shoes 2020 For Men </span>
-						      		<span>Fugiat voluptates quasi nemo, ipsa perferendis</span>
-						      	</div>
-						      </td>
-						      <td class="border-bottom-0">$40.00</td>
-						      <td class="quantity border-bottom-0">
-					        	<div class="input-group">
-				             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-				          	</div>
-				          </td>
-				          <td class="border-bottom-0">$40.00</td>
-						      <td class="border-bottom-0">
-						      	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>
-				          	</button>
-				        	</td>
-						    </tr>
+						    
 						  </tbody>
 						</table>
 					</div>

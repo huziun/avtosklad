@@ -48,9 +48,15 @@ class navbar{
         <?php
     }
     public function log_out_buttons(){
-          
-                echo "<font style='color:white;'>Hello ".$_SESSION['login']['name']."</font>";
         ?>
+        <div style ="margin-right: 12">
+            <?php
+            echo "<font style='color:white;'>Hello ".$_SESSION['login']['name']."</font>";
+            ?>
+        </div>
+        
+                
+                
         <div class="mr-2" >
                         
                         
