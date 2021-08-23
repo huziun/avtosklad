@@ -23,7 +23,7 @@ class Register{
     }
 
     public function logInUser(){
-        var_dump($_POST);
+       // var_dump($_POST);
         
         if(isset($_POST['regbutt'])){
             $this->validation();
@@ -34,7 +34,7 @@ class Register{
 
     private function validation(){
         $par = $this->valid->checkPaswword($this->user['password'], $this->user['password2']);
-        var_dump($par);
+        //var_dump($par);
         if($par == 'true'){
             $this->inputInDB();
         }
@@ -46,7 +46,7 @@ class Register{
     private function inputInDB(){
 
         $data = $this->xesh->NEW_password($this->user['password']);
-        var_dump($this->user);
+        //var_dump($this->user);
         $sql ="INSERT INTO `users` VALUES(NULL, ?, ?, ?, ?,?)";
         $result = $this->db->prepare($sql);
         $result->execute(array($this->user['firstname'], $this->user['lastname'],$this->user['email'], $data[0], $data[1]));
