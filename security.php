@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require "modal.php";
 
 class Page_access{
     
@@ -19,13 +19,3 @@ class Page_access{
     }
 }
 
-class Validation{
-   
-    public function checkPaswword( $pas1, $pas2){
-        if($pas1 === $pas2){
-            return 'true';
-        }
-        return 'false';
-    }
-}
-?>

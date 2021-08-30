@@ -16,8 +16,8 @@ class ProductReader {
         $kuni = $this->db->query( "SELECT SUM(`count`) FROM `universal_products`");
         $p = $products->fetch();
         $k = $kuni->fetch();
-
-        return $p[0]+$k[0];
+        $pk = $p[0]+$k[0];
+        return $pk;
     }
 }
 class CogReader extends ProductReader {

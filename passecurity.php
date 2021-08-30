@@ -9,23 +9,17 @@ class Password{
             $salt = $salt . $salt_c;
 
         }
-        //echo 'salt:';
-        //var_dump($salt);
         return $salt;
     }
 
     private function MD($pass, $salt){
         $md5_str = md5($pass . $salt);
-        //echo 'md5_str:';
-        //var_dump($md5_str);
         return $md5_str;
     }
 
     public function NEW_password($pass){
         $salt = $this->Salt();
         $md5_str = $this->MD($pass, $salt);
-        //echo 'md5_str:';
-        //var_dump($md5_str);
         return [$md5_str,$salt];
     }
     

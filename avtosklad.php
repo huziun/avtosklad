@@ -3,18 +3,21 @@ session_start();
 
 if(isset($_POST['button'])){
 	
-    //$_SESSION['login']=$_POST['email'];
+    $_SESSION['login']=$_POST['email'];
 	require 'login.php';
 }
+
 if(isset($_POST['regbutt'])){
+	var_dump($_POST);
 	$_SESSION['regbutt'] = $_POST['email'];
 	require 'register.php';
 }
 
-require_once 'security.php';
+
+//require_once 'security.php';
 require "product.php";
-$odj = new Page_access;
-$odj->checkuser();
+//$odj = new Page_access;
+//$odj->checkuser();
 ?>
 <html>
 <head>
@@ -62,7 +65,7 @@ $odj->checkuser();
 		
 			</div>
 			<div class="tab-content" id="pills-tabContent">
-			<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">.
+			<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 			<div class="col-md-20">
 					<h3 class="h5 mb-1 text-center">Запчастини</h3>
 					<div class="">
