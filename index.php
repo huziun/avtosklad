@@ -32,6 +32,7 @@ session_start();
         }
         
         </style>
+        <link rel="stylesheet" href="css/index.css">
     </head>
     
     <body class ="zopka">
@@ -66,11 +67,14 @@ session_start();
                         <div class="md-3">
                             <label for="FirstInputPassword1" class="form-label input_c">Password</label>
                             <input type="password" class="form-control" id="FirstInputPassword1" name="password">
+                            <div class="error_message" id='p1'></div>
                         </div>
 
                         <div class="md-3">
                             <label for="SecondInputPassword1" class="form-label input_c">Please repit your password</label>
                             <input type="password" class="form-control" id="SecondInputPassword1" name="password2">
+                            <div class="error_message" id='p2'></div>
+
                         </div>
                     
                         <div class="md-3">
@@ -86,7 +90,7 @@ session_start();
                         </div>
 
                         <div class="col-12">
-                            <button class="btn btn-primary" type="submit" name="regbutt">Submit form</button>
+                            <button class="btn btn-primary" type="submit" name="regbutt" id="registerButton">Submit form</button>
                         </div>
                         
 
@@ -125,7 +129,7 @@ session_start();
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src='index.js'> </script>
-       
+        
     </body>
     
 </html>
