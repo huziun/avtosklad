@@ -25,15 +25,16 @@ class LogIn{
         $result = $this->bd->prepare($sql);
         $result->execute(array( $this->user['email']));
         $ressa = $result->fetch();
+        
         if($ressa != false){
             $check = $this->check->chacking($ressa['password'],$this->user['password'],$ressa['salt']);
             
-            if($check == true){
+            if($check){
                 $_SESSION['login'] = $ressa;
                 header("Location: avtosklad.php");
             }
         }else{
-            $_SESSION="";
+            unset($_SESSION['login']);
             header("Location: index.php");
         }
     }
