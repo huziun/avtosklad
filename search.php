@@ -6,7 +6,7 @@ class Search{
         $query = htmlspecialchars($query);
     
         if (!empty($query)) { 
-            if()
+            if(True)
                 $q = "SELECT `name`, `cod`, `car` FROM `product` WHERE `text` LIKE '%$query%'";
     
                 $result = mysql_query($q);
@@ -19,5 +19,7 @@ class Search{
                     //var_dump($text);  
         return $text; 
     } 
+}
+    }
 }
 ?>

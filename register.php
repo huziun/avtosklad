@@ -22,14 +22,14 @@ class Register{
     }
 
     public function logInUser(){
-        var_dump($user);
+    #var_dump($this->user);
        $this->valid->ValidRegisterData($this->user);
        
        
     }
 
     private function validation(){
-        // $par = $this->valid->checkPaswword($this->user['password'], $this->user['password2']);
+        $par = $this->valid->checkPaswword($this->user['password'], $this->user['password2']);
         if($par == 'true'){
             $this->inputInDB();
         }

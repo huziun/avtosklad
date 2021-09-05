@@ -3,21 +3,22 @@ session_start();
 
 if(isset($_POST['button'])){
 	
-    $_SESSION['login']=$_POST['email'];
+    
 	require 'login.php';
+	
 }
 
 if(isset($_POST['regbutt'])){
-	var_dump($_POST);
-	$_SESSION['regbutt'] = $_POST['email'];
+	
+	
 	require 'register.php';
 }
 
 
 //require_once 'security.php';
 require "product.php";
-//$odj = new Page_access;
-//$odj->checkuser();
+$odj = new Page_access;
+$odj->checkuser();
 ?>
 <html>
 <head>
